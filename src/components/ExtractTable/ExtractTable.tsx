@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import * as S from "./table.styles";
+import { api } from "../../services/api";
 
 export const ExtractTable = () => {
+  useEffect(() => {
+    api.get("/transactions").then((response) => console.log(response.data));
+  }, []);
   return (
     <S.Container>
       <table>

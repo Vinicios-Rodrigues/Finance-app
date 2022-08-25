@@ -13,13 +13,24 @@ export const Container = styled.div`
   th {
     text-align: left;
     padding: 1rem 2rem;
-    color: #64656a;
-    font-weight: 400;
+    color: #919598;
+    filter: brightness(0.4);
+    font-weight: 500;
   }
   td {
-    border-radius: 0.25rem;
     background: ${colors.white};
+    color: #757677;
     text-align: left;
     padding: 1rem 2rem;
+
+    &:first-child {
+      color: ${colors.black_200};
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+    &:last-child {
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
   }
 `;
